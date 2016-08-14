@@ -10,4 +10,7 @@ RUN pip install -r /data/requirements.txt
 
 COPY benblog /data/
 
-CMD ["gunicorn", "benblog:app"]
+ENTRYPOINT ["gunicorn", "benblog:app"]
+CMD ["--bind=0.0.0.0:8080", "--workers=4"]
+
+EXPOSE 8080

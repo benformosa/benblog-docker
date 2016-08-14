@@ -1,0 +1,3 @@
+[submodule "benblog"]
+	path = benblog
+	url = https://github.com/benformosa/benblog
