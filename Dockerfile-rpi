@@ -12,5 +12,6 @@ COPY benblog /data/
 
 ENTRYPOINT ["gunicorn", "benblog:app"]
 CMD ["--bind=0.0.0.0:8080", "--workers=4"]
+VOLUME ["/data/article", "/data/article_meta", "/data/static"]
 
 EXPOSE 8080
